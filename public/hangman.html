@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is Home page with general information about me">
+    <title>Home--Information about website's purpose</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e86e03">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#e5720d">
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="container">
+        <header class="main-header">
+            <span class="logo">MyResume</span>
+            <div id="nav">
+
+                <nav class="nav-position">
+
+
+                    <a class="active first nav" href="index.html">Home</a>
+                    <a class="second nav" href="education.html">Education</a>
+                    <a class="third nav" href="skills.html">Skills</a>
+                    <a class="fourth nav" href="contact.html">Contact</a>
+
+
+                </nav>
+            </div>
+        </header>
+        <div class="card">
+            <div class="card-top">
+                <div class="name">Hangman</div>
+            </div>
+            <div class="box hangman">
+                <main>
+                    <section>
+                        <header>
+                            <h1><span class="heading">Play Hangman</span></h1>
+                            <h2>About the game</h2>
+                        </header>
+                        <p>To play this game, you need to guess an everyday phrase such as <em>a hot potato</em> for example. 
+                            You need to hit the keys to start guessing and for each guess a ' _ ' will be replaced if that guess is part of the phrase.
+                            If not, you will get 6 chances to guess before the game is Over. 
+                        </p>
+                        <article>
+                            <header>
+                                <h3>Rules</h3>
+                                <p>Please fellow below rules to play this game</p>
+                            </header>
+                            <p>
+                            <ul>
+                                <li>Please Enter your name in the textbox below and click on submit button</li>
+                                <li>After submitting your name please click on <strong>START</strong> to start the game
+                                </li>
+                                <li>After Clicking on start, you can start pressing keys to guess the Phrase</li>
+                                <li>Please enter Alphabets only</li>
+                                <li>If you want to play again, make sure you enter your name again and hit submit</li>
+                                <li>There is a hidden hint available on the page to help you complete the game</li>
+                                <li>You will get 6 tries to guess the phrase. Good luck!</li>
+                            </ul>
+                            </p>
+
+                        </article>
+
+                        <picture>
+
+                            <img id="hangman-img" class="image-hangman" src="resources/images/square@2X.jpg"
+                                alt="Hangman image painted on a wall">
+
+                                <p>Source: <a href="https://www.flickr.com/photos/jkornstaedt/33353679170/in/photolist-SPmjMY-2iLmfvk-bMBgrv-hauLAF-f2Biun-9UVv8T-5dLFcF-cNgPHG-7DJhqX-fBmZ4t-9GZ6tW-ToCNvq-2j58MAX-2jVhJDC-Cb15y9-sgK2jp-57n8NB-S1wuVR-69MxaR-dCWrWU-baP53k-39w9a8-3Tueo-cNgPuW-EEsYFV-kfwPJA-cNgPFG-5U4Q8c-La1ygR-c8MqeJ-U8jEmL-mV4as-eayufz-21JBzn1-cNgPym-wyequT-ZBh3ec-cNgPDf-7TK8kQ-sgMenx-zoycgU-2jD1mfg-eVh7RH-aRDzPe-77BE56-p6RpyW-6oFZ58-s4JPfk-cojard-4WrgS3">by Jürgen Kornstaedt</a></p>
+
+                    <p><a href="https://creativecommons.org/licenses/by/2.0/">Licence</a></p>
+
+                            <!-- <figcaption class="image-hangman">Hangman image from flicr</figcaption> -->
+
+                        </picture>
+
+                        <form id="hg-name">
+                            <label for="name">Please enter your Name: </label>
+                            <input type="text" id="name" name="name" required> <br />
+                            <input id="nameBtn" class="" type="button" onclick="getName()" value="Submit">
+                        </form>
+
+
+
+                        <div class="maxWrong">Wrong guesses: <span id="mistake">0</span> of <span id="maxWrong"></span>
+                        </div>
+
+                        <div>
+                            <p id="word" class="phrase"></p>
+                        </div>
+                        <div id="guesses"></div>
+                        <div id="message"></div>
+                        <div id="key"></div>
+                        <input id="start" class="btn-hangman" type="button" onclick="startGame()" value="START"
+                            disabled> <br />
+                    </section>
+                </main>
+
+                <!-- </div>
+            <div class="box t-box"> -->
+                <h3 class="scores">Top Scores</h3>
+                <label for="scores">Scores</label>
+                <textarea class="scores" id="scores" disabled></textarea>
+
+                <!-- <div id="scores"></div> -->
+            </div>
+
+
+
+
+            <div class="box card-bottom">
+                <footer>
+                    <ul>
+                        <li><a href="think-of-a-number.html">Think of a number</a></li>
+                        <li>Email: k000213a@student.staffs.ac.uk</li>
+                        <li>Name: Sumanth Kandrpa</li>
+                    </ul>
+                    <div class="name"> &copy; sumanth</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="top"></div>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+    <script src="resources/scripts/hangman.js"></script>
+</body>
+
+</html>

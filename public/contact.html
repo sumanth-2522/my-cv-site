@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is Home page with general information about me">
+    <title>Home--Information about website's purpose</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e86e03">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#e5720d">
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="container">
+        <header class="main-header">
+            <span class="logo">MyResume</span>
+            <div id="nav">
+
+                <nav class="nav-position">
+
+
+                    <a class="first nav" href="index.html">Home</a>
+                    <a class="second nav" href="education.html">Education</a>
+                    <a class="third nav" href="skills.html">Skills</a>
+                    <a class="active fourth nav" href="#">Contact</a>
+
+
+                </nav>
+            </div>
+        </header>
+        <div class="card">
+            <div class="card-top">
+                <div class="name">Contact</div>
+            </div>
+            <div class="box box-TOAN">
+                <main>
+                    <picture>
+                        <img class="contact-img" src="resources/images/contact.svg" width="200" height="200" alt="An Image icon that looks like telephone ring">
+                    </picture>
+                    <p>Attribution: Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</p>
+                    <section>
+                        <h1><span class="heading">Contact form</span></h1>
+                        <h2>Please contact me by filling below form</h2>
+                        <form class="contact-form" id="form" action="get">
+                            <fieldset>
+                                <legend>Contact form</legend>
+                                <label for="name">Name: </label>
+                                <input type="text" id="name" name="name" required> <br />
+                                <div class="error"><span id="forName"></span></div>
+
+                                <label for="company">Company: </label>
+                                <input type="text" id="company" name="company" required > <br />
+                                <div class="error"><span id="forCompany"></span></div>
+
+                                <label for="email">Email: </label>
+                                <input type="email" id="email" name="email" required> <br />
+                                <div class="error"><span id="forEmail"></span></div>
+
+                                <label for="phone">Phone: </label>
+                                <input type="text" id="phone" name="phone" required> <br />
+                                <div class="error"><span id="forPhone"></span></div>
+
+                                <label for="message-box">Message: </label>
+                                <textarea id="message-box"></textarea><br />
+                                <div class="error"><span id="forMessage"></span></div>
+
+                                <input id="contact-btn" type="submit" name="submit" value="Submit">
+                            </fieldset>
+                        </form>
+
+                    </section>
+                </main>
+            </div>
+            <div class="card-bottom">
+                <footer>
+                    <ul>
+                        <li><a href="think-of-a-number.html">Think of a number</a></li>
+                        <li><a href="hangman.html">Hangman</a></li>
+                        <li>Email: k000213a@student.staffs.ac.uk</li>
+                        <li>Name: Sumanth Kandarpa</li>
+                    </ul>
+                    <div class="name"> &copy; sumanth</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+    <script src="resources/scripts/validate.js"></script>
+    <div class="top"></div>
+</body>
+
+</html>

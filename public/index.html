@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Home page with general information about me">
+    <title>Home--Information about website's purpose</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e86e03">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#e5720d">
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="container">
+        <header class="main-header">
+            <span class="logo">MyResume</span>
+            <div id="nav">
+
+                <nav class="nav-position">
+
+
+                    <a class="active first nav" href="#">Home</a>
+                    <a class="second nav" href="education.html">Education</a>
+                    <a class="third nav" href="skills.html">Skills</a>
+                    <a class="fourth nav" href="contact.html">Contact</a>
+
+
+                </nav>
+            </div>
+        </header>
+
+        <div class="card">
+            <div class="card-top">
+                <div class="name">Home</div>
+            </div>
+            <!-- <div class="card-body"> -->
+            <div class="box box-1">
+                <article class="artical-1">
+                    <header>
+                        <h1><span class="heading">About me</span> </h1>
+                        <h2>Hello!</h2>
+                    </header>
+
+                    <p>I am Sumanth. I am from Hyderabad, India. I have done most of my education from my home town Visakhapatnam.
+                        I was facinated by computers from very early age. So I did BEngg computer science and later went
+                        onto
+                        work for few organisations. I have mainly worked in Java, python, and I have experience in
+                        frameworks such as
+                        Spring boot, JSF etc. Please refer to my <a href="education.html">Education</a> page for full
+                        details.
+                    </p>
+                    <p>My name is Sumanth and I am a student at Staffs uni. </p>
+                </article>
+            </div>
+            <div class="box box-2">
+                <article class="artical-1">
+                    <header>
+                        <h1><span class="heading">Hobbies</span></h1>
+                        <h2>My Hobbies</h2>
+                    </header>
+                    <p>I love reading books. I love travelling. I play and follow tennis and cricket and badminton. I
+                        some times draw.
+                        I love cooking as well. I like to try various dishes. But mostly I love coding. I make
+                        applications that help with
+                        daily tasks. For example I am working on an application right now which keeps tracks of how much
+                        time I am spending on each
+                        module per weekly and monthly bases.
+                    </p>
+
+                </article>
+            </div>
+            <div class="box box-3">
+                <article>
+                    <header class="artical-1">
+                        <h1><span class="heading">About the website</span></h1>
+                        <h2>What is this website?</h2>
+                    </header>
+                    <p>This website is made to showcase my skills in HTML, CSS and ECMA Script. I have followed Good web
+                        principles
+                        while building my website. I present two games in my skills page to show case my skills in ECMA
+                        Script. Below are the links
+                    </p>
+                    <ol class="artical-1">
+                        <li class="artical-1"><a href="think-of-a-number.html">Think of a number</a></li>
+                        <li class="artical-1"><a href="hangman.html">Hangman</a></li>
+                    </ol>
+                   
+                </article>
+            </div>
+            <div class="box box-4">
+                <article class="artical-1">
+                    <header>
+                        <h1><span class="heading">Highlights</span></h1>
+                        <h2>What to look for</h2>
+                    </header>
+                    <p>I have made my website responsive. Which means you can use a mobile phone or tablet to view my
+                        website.
+                        You can play the games in the skills page they are made using ECMA Script.
+                    </p>
+                </article>
+            </div>
+            <!-- </div> -->
+            <div class="box card-bottom">
+                <footer>
+                    <ul>
+                        <li><a href="think-of-a-number.html">Think of a number</a></li>
+                        <li><a href="hangman.html">Hangman</a></li>
+                        <li>Email: k000213a@student.staffs.ac.uk</li>
+                        <li>Name: Sumanth Kandrpa</li>
+                    </ul>
+                    <div class="name"> &copy; sumanth</div>
+                </footer>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="top"></div>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

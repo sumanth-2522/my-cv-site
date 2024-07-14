@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Home page with general information about me">
+    <title>Education--My Education details</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e86e03">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#e5720d">
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="container">
+        <header class="main-header">
+            <span class="logo">MyResume</span>
+            <div id="nav">
+
+                <nav class="nav-position">
+
+
+                    <a class="first nav" href="index.html">Home</a>
+                    <a class="active second nav" href="#">Education</a>
+                    <a class="third nav" href="skills.html">Skills</a>
+                    <a class="fourth nav" href="contact.html">Contact</a>
+
+
+                </nav>
+            </div>
+        </header>
+
+        <div class="card">
+            <div class="card-top">
+                <div class="name">Education and Qualifications</div>
+            </div>
+            <div class="box box-3">
+                <main>
+                    <section>
+                        <header>
+                            <h1><span class="heading">My Education and qualifications</span></h1>
+                        </header>
+                        <article>
+                            <header>
+                                <h2>Education qualifications</h2>
+                            </header>
+                            <ul id="edu">
+                                <li>10th</li>
+                                <li>Intermediate or 12th</li>
+                                <li>Bachlors in computer science</li>
+                                <li>PG Diploma in advanced computer science</li>
+                            </ul>
+                        </article>
+                    </section>
+                </main>
+            </div>
+            <div class="box box-2">
+                <section>
+                    <header>
+                        <h1><span class="heading">Technologies</span></h1>
+                        <h2>Technologies I used</h2>
+                    </header>
+                    <table id="edu-table">
+                        <thead>
+                            <tr>
+                                <th>Technologies</th>
+                                <th>Ratings(Out of 5)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTML</td>
+                                <td>4.3</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                                <td>4.0</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>4.5</td>
+                            </tr>
+                            <tr>
+                                <td>Angular</td>
+                                <td>3.5</td>
+                            </tr>
+                            <tr>
+                                <td>Java</td>
+                                <td>4.3</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="box box-4">
+
+                <section>
+                    <header>
+                        <h3>Experience</h3>
+                    </header>
+                    <p>I have worked at AppEnsure ltd. which is a USA based company builds an APM tool namd
+                        AppEnsure. I have worked at AppEnsure for 4 years. <br> Before that I worked at IBM at
+                        Technical support associate. </p>
+                    <p>I have 5 years of Over all IT experience out of which I have 4 years of software development
+                        experience. </p>
+                    <p>I have worked predominantly on <em>Java SE</em> and I have experience in Object oriented
+                        design, multi threading, Collections and Generics and so on. </p>
+                    <p>I Also have experience in <em>Java EE </em> frameworks such as Servlets and JSPs and JSF.</p>
+                    <p>The other frameworks I am fluent in are Spring core, Spring web REST apis, Spring data JPA
+                        and Spring boot
+                    </p>
+                </section>
+            </div>
+            <div class="box card-bottom">
+                <footer>
+                    <ul>
+                        <li><a href="think-of-a-number.html">Think of a number</a></li>
+                        <li><a href="hangman.html">Hangman</a></li>
+                        <li>Email: k000213a@student.staffs.ac.uk</li>
+                        <li>Name: Sumanth Kandrpa</li>
+                    </ul>
+                    <div class="name"> &copy; sumanth</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
